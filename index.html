@@ -1,0 +1,197 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <title>Contact Information</title>
+  <style> 
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      padding: 40px;
+    }
+ 
+    .container {
+      width: 650px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-small {
+      width: 20%;
+    }
+
+    .form-large {
+      width: 52%;
+    }
+
+    .form-half {
+      width: 48%;
+    }
+
+    .form-full {
+      width: 50%;
+    }
+
+    label {
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    .required {
+      color: red;
+      margin-left: 4px;
+    }
+
+    input,
+    select {
+      padding: 8px;
+      font-size: 13px;
+      border: 1px solid gainsboro;
+      border-radius: 2px;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .checkbox-row input[type="checkbox"] {
+      margin-right: 10px;
+      width: 16px;
+      height: 16px;
+    }
+
+    .save-btn {
+      padding: 8px 25px;
+      background-color: white;
+      color: black;
+      border: 2px solid red;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .save-btn:hover {
+      background-color: red;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Contact Information</h2>
+    <form id="contactForm">
+
+      <!-- Name ve Surname -->
+      <div class="row">
+        <div class="form-group form-half">
+          <label for="name">Name<span class="required">*</span></label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group form-half">
+          <label for="surname">Surname<span class="required">*</span></label>
+          <input type="text" id="surname" required>
+        </div>
+      </div>
+
+      <!-- Email ve Repeat Email -->
+      <div class="row">
+        <div class="form-group form-half">
+          <label for="email">Email<span class="required">*</span></label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group form-half">
+          <label for="repeatEmail">Repeat Email<span class="required">*</span></label>
+          <input type="email" id="repeatEmail" required>
+        </div>
+      </div>
+
+      <!-- Country Code, Phone Number, Country -->
+      <div class="row">
+        <div class="form-group form-small">
+          <label for="countryShort">Country Code<span class="required">*</span></label>
+          <select id="countryShort" required>
+            <option value="">Neth..</option>
+            <option value="NL">Netherlands</option>
+            <option value="TR">Turkey</option>
+          </select>
+        </div>
+        <div class="form-group form-small">
+          <label for="number">Phone Number<span class="required">*</span></label>
+          <input type="tel" id="number" required>
+        </div>
+        <div class="form-group form-large">
+          <label for="country">Country<span class="required">*</span></label>
+          <select id="country" required>
+            <option value="">Select a country</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Turkey">Turkey</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- City ve Address -->
+      <div class="row">
+        <div class="form-group form-half">
+          <label for="city">City<span class="required">*</span></label>
+          <input type="text" id="city" required>
+        </div>
+        <div class="form-group form-half">
+          <label for="address">Address<span class="required">*</span></label>
+          <input type="text" id="address" required>
+        </div>
+      </div>
+
+      <!-- Zipcode -->
+      <div class="row">
+        <div class="form-group form-full">
+          <label for="zipcode">Zipcode<span class="required">*</span></label>
+          <input type="text" id="zipcode" required>
+        </div>
+      </div>
+
+      <!-- Checkbox -->
+      <div class="checkbox-row">
+        <input type="checkbox" id="participate">
+        <label for="participate">I am participating in the journey myself.</label>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="save-btn">Save</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Form gönderme işlemini tamamladın!");
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
